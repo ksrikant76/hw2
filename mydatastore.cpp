@@ -80,7 +80,7 @@ std::vector<Product*> MyDataStore::search(std::vector<std::string>& terms, int t
     }
     else {
       //No matches
-      std::set<Product*> nomatches
+      std::set<Product*> nomatches;
       perTerm.push_back(nomatches);
     }
   }
