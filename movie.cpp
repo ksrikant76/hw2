@@ -31,7 +31,7 @@ std::string Movie::displayString() const {
   oss << name_ << "\n";
   oss << "Genre: " << genre_ << " Rating: " << rating_ << "\n";
   oss << std::fixed << std::setprecision(2);
-  oss << price_ << qty_ << " left.";
+  oss << price_ << " " << qty_ << " left.";
   return oss.str();
 }
 
