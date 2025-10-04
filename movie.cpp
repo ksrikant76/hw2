@@ -29,9 +29,9 @@ std::set<std::string> Movie::keywords() const {
 std::string Movie::displayString() const {
   std::ostringstream oss;
   oss << name_ << "\n";
-  oss << "Genre: " << genre_ << "  Rating: " << rating_ << "\n";
+  oss << "Genre: " << genre_ << " Rating: " << rating_ << "\n";
   oss << std::fixed << std::setprecision(2);
-  oss << "Price: " << price_ << "  Qty: " << qty_;
+  oss << price_ << qty_ << " left.";
   return oss.str();
 }
 

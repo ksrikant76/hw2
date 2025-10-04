@@ -30,9 +30,9 @@ std::set<std::string> Clothing::keywords() const {
 std::string Clothing::displayString() const {
   std::ostringstream oss;
   oss << name_ << "\n";
-  oss << "Brand: " << brand_ << "  Size: " << size_ << "\n";
+  oss << "Brand: " << brand_ << " Size: " << size_ << "\n";
   oss << std::fixed << std::setprecision(2);
-  oss << "Price: " << price_ << "  Qty: " << qty_;
+  oss << price_ << " " << qty_ << " left.";
   return oss.str();
 }
 

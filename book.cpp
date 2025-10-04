@@ -33,9 +33,9 @@ std::set<std::string> Book::keywords() const {
 std::string Book::displayString() const {
   std::ostringstream oss;
   oss << name_ << "\n";
-  oss << "Author: " << author_ << "  ISBN: " << isbn_ << "\n";
+  oss << "Author: " << author_ << " ISBN: " << isbn_ << "\n";
   oss << std::fixed << std::setprecision(2);
-  oss << "Price: " << price_ << "  Qty: " << qty_;
+  oss << price_ << " " << qty_ << " left.";
   return oss.str();
 }
 
