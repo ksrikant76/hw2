@@ -43,5 +43,5 @@ void Book::dump(std::ostream& os) const {
     //Product dumps common fields: category, name, price, qty
     Product::dump(os);
     //Book fields
-    os << isbn_ << "/n" << author_ << std::endl;
+    os << isbn_ << "\n" << author_ << std::endl;
 }
