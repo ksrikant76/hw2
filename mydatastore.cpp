@@ -115,11 +115,13 @@ std::vector<Product*> MyDataStore::search(std::vector<std::string>& terms, int t
     ++combinedit;
   }
 
-  bool ascending(Product* a, Product* b) {
-    return a->getName() < b->getName();
-  }
+  struct NameSort {
+    bool operator()(Product* a, Product* b) const {
+      return a->getName() < b->getName();
+    }
+  };
 
-  std::sort(lastHits_.begin(), lastHits_.end(), ascending);
+  std::sort(lastHits_.begin(), lastHits_.end(), NameSort());
   
   return lastHits_;
 }
